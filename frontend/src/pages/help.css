@@ -1,0 +1,233 @@
+/* 🌸 ROOT */
+:root {
+  --primary: #ff5c8a;
+  --secondary: #ff9ab5;
+  --white: #ffffff;
+  --shadow: 0 10px 30px rgba(255, 92, 138, 0.3);
+}
+
+/* 🌈 BODY */
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+/* 💖 MAIN */
+.home {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #ff9ab5, #ff5c8a);
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* 🎀 FLOATING BACKGROUND */
+.bg-circle {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  animation: float 6s infinite ease-in-out;
+}
+
+.bg-circle.one {
+  width: 200px;
+  height: 200px;
+  top: -50px;
+  left: -50px;
+}
+
+.bg-circle.two {
+  width: 150px;
+  height: 150px;
+  bottom: -40px;
+  right: -40px;
+}
+
+@keyframes float {
+  50% {
+    transform: translateY(20px);
+  }
+}
+
+/* 💎 HERO CARD */
+.hero-card {
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(15px);
+  border-radius: 25px;
+  padding: 25px;
+  text-align: center;
+  color: white;
+  box-shadow: var(--shadow);
+  margin-bottom: 20px;
+}
+
+.hero-card h1 {
+  margin: 0;
+  font-size: 26px;
+}
+
+.hero-card p {
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+/* 🚀 BUTTON */
+.hero-card button {
+  margin-top: 15px;
+  padding: 12px;
+  width: 100%;
+  border-radius: 30px;
+  border: none;
+  background: linear-gradient(135deg, #ff4b7d, #ff85a2);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 5px 20px rgba(255, 75, 125, 0.4);
+  transition: 0.3s;
+}
+
+.hero-card button:hover {
+  transform: scale(1.05);
+}
+
+/* 🔲 GRID */
+.quick-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+/* 💎 CARDS */
+.quick-card {
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(12px);
+  border-radius: 18px;
+  padding: 20px;
+  text-align: center;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: var(--shadow);
+}
+
+.quick-card:hover {
+  transform: translateY(-6px) scale(1.05);
+  background: rgba(255, 255, 255, 0.4);
+  box-shadow: 0 10px 30px rgba(255, 105, 135, 0.5);
+}
+
+/* 🎀 ICON */
+.icon {
+  font-size: 28px;
+  margin-bottom: 10px;
+  transition: 0.3s;
+}
+
+.quick-card:hover .icon {
+  transform: scale(1.2);
+}
+
+/* 📢 FEATURE BANNER */
+.feature-banner {
+  margin-top: 20px;
+  background: white;
+  border-radius: 20px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: var(--shadow);
+}
+
+.feature-banner h3 {
+  color: var(--primary);
+  margin-bottom: 5px;
+}
+
+.feature-banner p {
+  font-size: 13px;
+  color: #555;
+}
+
+/* 🚨 FLOATING SOS */
+.floating-sos {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: none;
+  font-size: 26px;
+  background: linear-gradient(135deg, #ff1744, #ff5252);
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 0 25px rgba(255, 0, 0, 0.7);
+  animation: pulse 1.2s infinite;
+}
+
+/* 💥 SOS ANIMATION */
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 23, 68, 0.7);
+  }
+
+  70% {
+    box-shadow: 0 0 0 20px rgba(255, 23, 68, 0);
+  }
+}
+
+/* 📱 RESPONSIVE */
+@media (min-width: 768px) {
+  .home {
+    max-width: 900px;
+    margin: auto;
+  }
+
+  .quick-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .hero-card h1 {
+    font-size: 32px;
+  }
+}
+
+/* ---------------- HELP PAGE ---------------- */
+
+.help-page {
+  height: 100vh;
+  background: linear-gradient(135deg, red, #ff4b7d);
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+.help-btn {
+  width: 100%;
+  padding: 18px;
+  margin-top: 20px;
+  font-size: 18px;
+  background: black;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.help-btn:hover {
+  background: #222;
+}
+
+.wa-btn {
+  width: 100%;
+  padding: 15px;
+  margin-top: 10px;
+  background: #25D366;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.wa-btn:hover {
+  background: #1ebe5d;
+}

@@ -1,0 +1,218 @@
+/* 🌸 ROOT COLORS */
+:root {
+  --primary: #ff5c8a;
+  --secondary: #ff9ab5;
+  --white: #ffffff;
+}
+
+/* 🌈 BODY */
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  transition: all 0.3s ease;
+}
+
+/* 🌸 BACKGROUND */
+.home {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #ff6a88, #ff99ac);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+/* 💖 HEADER */
+.home-header {
+  text-align: center;
+  color: white;
+  margin-bottom: 25px;
+}
+
+.home-header h2 {
+  font-size: 26px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.home-header p {
+  opacity: 0.9;
+}
+
+/* 🌟 MAIN CARD */
+.home-main-card {
+  width: 100%;
+  max-width: 420px;
+  padding: 25px;
+  border-radius: 25px;
+  backdrop-filter: blur(12px);
+  background: rgba(255, 255, 255, 0.25);
+  text-align: center;
+  color: white;
+  box-shadow: 0 10px 40px rgba(255, 105, 135, 0.3);
+  margin-bottom: 25px;
+  transition: 0.3s;
+}
+
+.home-main-card:hover {
+  transform: translateY(-5px) scale(1.02);
+}
+
+/* 🚀 BUTTON */
+.home-main-btn {
+  margin-top: 15px;
+  padding: 14px;
+  border-radius: 30px;
+  border: none;
+  background: linear-gradient(135deg, #ff4b7d, #ff85a2);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  width: 100%;
+  transition: 0.3s;
+  box-shadow: 0 5px 20px rgba(255, 75, 125, 0.4);
+}
+
+.home-main-btn:hover {
+  transform: scale(1.05);
+}
+
+/* 🔲 GRID */
+.home-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  width: 100%;
+  max-width: 420px;
+}
+
+/* 💎 CARDS */
+.home-card {
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(12px);
+  padding: 20px;
+  border-radius: 18px;
+  text-align: center;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* 💖 HOVER + GLOW */
+.home-card:hover {
+  transform: translateY(-6px) scale(1.05);
+  background: rgba(255, 255, 255, 0.45);
+  box-shadow: 0 10px 30px rgba(255, 105, 135, 0.5);
+}
+
+/* 🎀 ICON */
+.home-icon {
+  font-size: 30px;
+  margin-bottom: 10px;
+  transition: transform 0.3s;
+}
+
+.home-card:hover .home-icon {
+  transform: scale(1.2);
+}
+
+/* 🚨 SOS BUTTON */
+.home-sos {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: none;
+  font-size: 26px;
+  background: linear-gradient(135deg, #ff1744, #ff5252);
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 0 25px rgba(255, 0, 0, 0.7);
+  animation: pulse 1.2s infinite;
+}
+
+/* 🌙 THEME TOGGLE */
+.theme-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: white;
+  border: none;
+  border-radius: 30px;
+  padding: 8px 15px;
+  cursor: pointer;
+  font-size: 14px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  z-index: 999;
+}
+
+/* 🌙 DARK MODE */
+body.dark {
+  background: linear-gradient(135deg, #1e1e2f, #2c2c44);
+}
+
+body.dark .home {
+  background: transparent;
+}
+
+body.dark .home-main-card {
+  background: rgba(40, 40, 60, 0.8);
+}
+
+body.dark .home-card {
+  background: rgba(40, 40, 60, 0.8);
+}
+
+body.dark .home-card:hover {
+  background: rgba(60, 60, 90, 0.9);
+}
+
+/* 💥 ANIMATION */
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 23, 68, 0.7);
+  }
+
+  70% {
+    box-shadow: 0 0 0 20px rgba(255, 23, 68, 0);
+  }
+}
+
+/* 🌈 FADE */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 💻 LAPTOP RESPONSIVE */
+@media (min-width: 768px) {
+  .home {
+    max-width: 900px;
+    margin: auto;
+  }
+
+  .home-grid {
+    grid-template-columns: repeat(4, 1fr);
+    max-width: 900px;
+  }
+
+  .home-main-card {
+    max-width: 500px;
+  }
+}
+
+/* 🖥 LARGE SCREEN */
+@media (min-width: 1200px) {
+  .home {
+    max-width: 1100px;
+  }
+}
