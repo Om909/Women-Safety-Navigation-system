@@ -40,7 +40,7 @@ function Journey() {
       setOriginCoords({ lat, lng: lon });
       getAddress(lat, lon, setCurrentAddress);
 
-      fetch("http://localhost:5000/location", {
+      fetch("https://women-safety-navigation-system.onrender.com/location", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ lat, lon }),
@@ -119,7 +119,7 @@ function Journey() {
   const handleCapture = async (img) => {
     setCapturedImage(img);
 
-    await fetch("http://localhost:5000/upload", {
+    await fetch("https://women-safety-navigation-system.onrender.com/upload", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -132,7 +132,7 @@ function Journey() {
   const triggerEmergency = async () => {
     if (!originCoords) return;
 
-    await fetch("http://localhost:5000/sos", {
+    await fetch("https://women-safety-navigation-system.onrender.com/sos", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -166,7 +166,7 @@ function Journey() {
 
     // Optional: auto capture photo
     if (capturedImage) {
-      await fetch("http://localhost:5000/upload", {
+      await fetch("https://women-safety-navigation-system.onrender.com/upload", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

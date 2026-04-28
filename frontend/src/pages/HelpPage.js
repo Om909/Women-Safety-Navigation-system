@@ -40,7 +40,7 @@ ${link}`;
     if (!location) return;
 
     try {
-      await fetch("http://localhost:5000/sos", {
+      await fetch("https://women-safety-navigation-system.onrender.com/sos", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
